@@ -27,17 +27,8 @@ jobs:
         uses: qualityclouds/action-snow-full-scan@0.0.5
         with:
           token: ${{ secrets.QC_TOKEN }}
-          instance_url: 'https://ven02284.service-now.com'
+          instance_url: 'https://ven02283.service-now.com'
           api_url: 'https://api.qualityclouds.com'
-          
-      - name: Slack Notification
-        if: ${{ failure() }}
-        uses: slackapi/slack-github-action@v1.15.0
-        with:
-          channel-id: 'C010SJZGLR1'  # Slack channel id to post message
-          slack-message: 'Application deployment stopped due to Quality Gate FAIL'
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           
       - name: ServiceNow CI/CD Apply Changes
         uses: ServiceNow/sncicd-apply-changes@2.0.0

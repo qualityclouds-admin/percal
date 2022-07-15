@@ -27,8 +27,6 @@ jobs:
         uses: qualityclouds/action-snow-full-scan@1.0.0
         with:
           token: ${{ secrets.QC_TOKEN }}
-          instance_url: 'https://ven02283.service-now.com'
-          api_url: 'https://api.qualityclouds.com'
           
       - name: ServiceNow CI/CD Apply Changes
         uses: ServiceNow/sncicd-apply-changes@2.0.0

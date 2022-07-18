@@ -43,7 +43,7 @@ jobs:
           versionTemplate: 1.1
           versionFormat: template
           # Optional, add +X to version number. Default: 1 
-          # incrementBy: X
+          # incrementBy: X 
         env:
           snowUsername: ${{ secrets.SN_USERNAME }}
           snowPassword: ${{ secrets.SN_PASSWORD }}

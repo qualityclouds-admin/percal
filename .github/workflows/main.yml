@@ -26,8 +26,8 @@ jobs:
       - name: QualityClouds CI/CD BuildCheck for Servicenow
         uses: qualityclouds/action-application-scan@1.0.0
         with:
-          token: ${{ secrets.QC_DEV_TOKEN }}
-          api_url: https://api-development.qualityclouds.com
+          token: ${{ secrets.QC_TOKEN }}
+          api_url: https://api.qualityclouds.com
           
       - name: ServiceNow CI/CD Apply Changes
         uses: ServiceNow/sncicd-apply-changes@2.0.0
